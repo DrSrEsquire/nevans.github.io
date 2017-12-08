@@ -28,13 +28,83 @@ footer {
 }
 
 
+
+/*---------------------------------------
+        Background Video
+----------------------------------------*/
+#video {
+  position: relative;
+  background: transparent;
+}
+
+.ytplayer-container{
+  position: absolute; 
+  top: 0;
+  z-index: -1; 
+}
 /*----------------------------------
               Links  
 -----------------------------------*/
+.uk-link, a{
+    color:#333;
+}
+.uk-button{
+    width: 150px;
+}
+.infolink .uk-button-primary {
+    background-color:#d80808 ;  
+}
+.uk-button{
+	color: rgba(216,8,8,1);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	border: 1px solid rgba(216,8,8,0.5);
+	position: relative;	
+}
+.uk-button a{
+	color: rgba(51,51,51,1);
+	text-decoration: none;
+	display: block;
+}
+.uk-button span{
+	z-index: 2;	
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;	
+}
+.uk-button::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	background-color: rgba(216,8,8,0.5);
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	-webkit-transform: scale(0.5, 1);
+	transform: scale(0.5, 1);
+}
+.uk-button:hover::before{
+	opacity: 1;
+	-webkit-transform: scale(1, 1);
+	transform: scale(1, 1);
+}
 
 
-
-
+.icon{
+    max-width: none;
+}
+.movieitem .uk-button{
+    width: 100%;
+}
 ul {
   padding: 0px;
   margin: 0px;
@@ -55,12 +125,12 @@ li {
 }
 
 .info {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1183176/background_img.jpg);
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1183176/background_img.jpg);
-  background-repeat: no-repeat;
   height: 600px;
 }
 
@@ -133,8 +203,6 @@ li {
 
 .icon {
   display: none;
-  height: 65px;
-  width: 65px;
   padding-left: 25px;
   padding-top: 15px;
 }
@@ -143,13 +211,20 @@ li {
   display: none;
 }
 
+
+
+
+
+
+
+
 @media (min-width: 850px) {
-  body {
+body {
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1183176/background_img.jpg);
     background-repeat: no-repeat;
     z-index: -1;
   }
-  .header {
+.header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -169,9 +244,7 @@ li {
   .name {
     color: #f2f2f2;
   }
-  .icon {
-    display: inherit;
-  }
+  
   .bookhead {
     display: flex;
     flex-direction: row;
@@ -206,12 +279,15 @@ li {
     padding-top: 15vh;
   }
   .info {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1183176/background_img.jpg);
+    background-repeat: no-repeat;
     background-image: none;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-left: 5%;
     padding-right: 5%;
+    z-index: -1;
   }
   .info p {
     max-width: 50%;
