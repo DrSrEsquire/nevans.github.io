@@ -7,6 +7,7 @@ body {
   color: #333;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+    height: 642px;
 }
 
 h1 {
@@ -106,9 +107,11 @@ button .uk-button-primary,{
 .icon{
     max-width: none;
 }
-.movieitem .uk-button{
+.movieitem .uk-button,
+.booktext .uk-button{
     width: 100%;
 }
+
 ul {
   padding: 0px;
   margin: 0px;
@@ -161,19 +164,11 @@ li {
 .personalpic {
   height: 200px;
   width: 200px;
-  border: 3px solid #d80808;
+  border: 5px solid #d80808;
 }
 
 .personalinfo {
   display: block;
-}
-
-#movie {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 #movie p {
@@ -280,7 +275,7 @@ body {
   }
   #book {
     margin-top: 0px;
-    padding-top: 15vh;
+    padding-top: 5vh;
   }
   .info {
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1183176/background_img.jpg);
