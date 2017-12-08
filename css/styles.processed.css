@@ -33,7 +33,7 @@ footer {
         Background Video
 ----------------------------------------*/
 #video {
-  position: relative;
+  
   background: transparent;
 }
 
@@ -48,10 +48,14 @@ footer {
 .uk-link, a{
     color:#333;
 }
+
 .uk-button{
     width: 150px;
 }
-.infolink .uk-button-primary {
+.infolink .uk-button-primary{
+    background-color:#d80808 ;  
+}
+button .uk-button-primary,{
     background-color:#d80808 ;  
 }
 .uk-button{
@@ -64,7 +68,7 @@ footer {
 	position: relative;	
 }
 .uk-button a{
-	color: rgba(51,51,51,1);
+	color: #fff;
 	text-decoration: none;
 	display: block;
 }
@@ -306,7 +310,7 @@ body {
     align-items: center;
   }
   .bookpic {
-    width: 25vh;
+    width: 250px;
     display: inherit;
     border: 3px solid #d80808;
     margin-right: 5%;
